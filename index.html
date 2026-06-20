@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="overclock">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE Ignite | Technical Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">IEEE <span class="glow-text">Ignite</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links-menu">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About IEEE</a></li>
+                <li><a href="#events" class="nav-item">Events</a></li>
+                <li><a href="#schedule" class="nav-item">Schedule</a></li>
+                <li><a href="#faq" class="nav-item">FAQ</a></li>
+                <li>
+                    <button id="theme-toggle-engine" class="theme-btn">
+                        <i class="fa-solid fa-bolt" id="mode-icon"></i> <span id="mode-text">LIGHT MODE</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="badge-glow">IEEE SB LBSITW Presents</div>
+            <h1 class="hero-title">IGNITE 2026</h1>
+            <p class="tagline">Sparking Innovation. Learning. Collaboration.</p>
+            
+            <p class="hero-description">
+                Welcome to the ultimate technical convergence where curiosity meets execution. Ignite 2026 brings together cross-functional tech loops, hands-on architectural builds, and intense algorithmic challenges designed to accelerate your engineering framework.
+            </p>
+
+            <div class="countdown-container">
+                <div class="time-block glass-card">
+                    <span id="days">00</span>
+                    <label>Days</label>
+                </div>
+                <div class="time-block glass-card">
+                    <span id="hours">00</span>
+                    <label>Hours</label>
+                </div>
+                <div class="time-block glass-card">
+                    <span id="minutes">00</span>
+                    <label>Mins</label>
+                </div>
+                <div class="time-block glass-card">
+                    <span id="seconds">00</span>
+                    <label>Secs</label>
+                </div>
+            </div>
+
+            <div class="event-details">
+                <span class="detail-tag"><i class="fa-regular fa-calendar"></i> October 14-15, 2026</span>
+                <span class="detail-tag"><i class="fa-solid fa-location-dot"></i> Main Seminar Hall</span>
+            </div>
+            <a href="#events" class="btn-neon">Explore Events</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About the Event</h2>
+            <div class="about-grid">
+                <div class="about-text glass-card">
+                    <h3>Empowering Student Innovators</h3>
+                    <p>IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. The IEEE Student Branch fosters an environment of continuous learning and technological mastery.</p>
+                    <p><strong>IEEE Ignite</strong> is our premier technical flagship event carefully curated to ignite the curiosity of students through hands-on technical workshops, competitive networking hackathons, and expert professional guidance panels.</p>
+                    <div class="social-links">
+                        <a href="https://www.ieee.org" target="_blank" class="social-icon"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://www.instagram.com/ieee_sb_lbsitw?igsh=MXNxazhkeWN5cDJucg==" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/ieee/" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box glass-card">
+                        <h4>9+</h4>
+                        <p>Immersive Tracks</p>
+                    </div>
+                    <div class="stat-box glass-card">
+                        <h4>3</h4>
+                        <p>Core Categories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="events-section">
+        <div class="container">
+            <h2 class="section-title">Featured Events</h2>
+            
+            <div class="controls-container glass-card">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search events by name...">
+                    <i class="fa-solid fa-xmark" id="clear-search"></i>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="technical">Technical</button>
+                    <button class="filter-btn" data-filter="professional">Professional</button>
+                    <button class="filter-btn" data-filter="interactive">Interactive</button>
+                </div>
+            </div>
+
+            <div class="events-grid" id="events-grid"></div>
+        </div>
+    </section>
+
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <h2 class="section-title">Event Schedule</h2>
+            <div class="timeline">
+                <div class="timeline-item glass-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">09:00 AM</div>
+                    <div class="timeline-content">
+                        <h3>Inauguration Ceremony</h3>
+                        <p>Welcome address by the IEEE Student Branch Chair and introductory keynote.</p>
+                    </div>
+                </div>
+                <div class="timeline-item glass-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">10:30 AM</div>
+                    <div class="timeline-content">
+                        <h3>Morning Tracks Begin</h3>
+                        <p>Parallel breakdown sessions for Web Development workshops and Tech Quizzes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item glass-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">01:00 PM</div>
+                    <div class="timeline-content">
+                        <h3>Networking Lunch</h3>
+                        <p>Connect with peers, mentors, and senior IEEE student leaders over refreshments.</p>
+                    </div>
+                </div>
+                <div class="timeline-item glass-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">02:30 PM</div>
+                    <div class="timeline-content">
+                        <h3>Innovation Pitches & Challenges</h3>
+                        <p>Team project presentations evaluated by panel judges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item glass-card">
+                    <button class="faq-question">Who can participate in IEEE Ignite? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Ignite is open to all college students from any stream or batch who have a driving curiosity to learn, innovate, and connect with like-minded technical minds.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">Do I need to be an IEEE member to attend? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>No! This event is open to both IEEE members and non-members. However, registered IEEE members get an exclusive discount on technical workshop certification options.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">Will certificates be provided? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Yes, all active event participants will receive official participation and track completion certificates digitalized via IEEE SB LBSITW.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 IEEE SB LBSITW. Designed for Web Team Task submission.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
